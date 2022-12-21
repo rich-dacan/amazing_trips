@@ -58,14 +58,13 @@ const GlobalStyled:any = createGlobalStyle`
     --color-pure-white: #FFFFFF;
     --color-shimmer: #f6f7f8;
     --color-primary: #075949;
-    --color-primary-dark: #f26202;
+    --color-primary-dark: #124f07;
     --color-grey: #545454;
     --color-agile: #ae0c08;
     --color-excel: #00ad2e;
     --color-power: #c9bf03;
     --color-lider: #14235e;
     --color-gestao: #667fcc;
-    --color-financas: #124f07;
     --color-empreendedorismo: #000;
     --color-tech: #da7804;
     --color-career: #3c0348;

@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
 import { PropsCarousel } from "../../@types";
-import { Card } from "../Cards/Index";
+import { Card } from "../Cards/TopicCards/Index";
 import { Container } from "./style";
 
 interface Props {

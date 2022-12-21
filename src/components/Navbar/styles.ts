@@ -10,7 +10,7 @@ export const Container = styled.div`
   color: #FFF;
   font-size: 2rem;
   position: sticky;
-  top: 0;
+  /* top: 0; */
 
   > svg {
     margin-left: 20px;
