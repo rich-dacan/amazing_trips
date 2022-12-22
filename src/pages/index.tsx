@@ -19,21 +19,16 @@ const Home: NextPage = () => {
   return (
     <>
       <Navbar />
-        <TopBanner />
-      <Container>
-
-        <Section>
-          <Content>
-            {/* <h1>Amazing Trips</h1> */}
-          </Content>
-        </Section>
+      
+      <TopBanner />
+      {/* <Container>
 
         <Section>
           <Content>
           </Content>
         </Section>
 
-      </Container>
+      </Container> */}
 
       <Section>
         <Content>
