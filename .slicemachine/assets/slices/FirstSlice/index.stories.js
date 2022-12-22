@@ -1,0 +1,9 @@
+import MyComponent from '../../../../slices/FirstSlice';
+
+export default {
+  title: 'slices/FirstSlice'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"heading1","text":"Police","spans":[]}],"description":[{"type":"paragraph","text":"Aliquip officia incididunt consequat cupidatat quis aliqua ut dolor velit labore et velit. Elit ad proident laboris quis proident nostrud. Culpa velit esse eiusmod proident consequat minim.","spans":[]}],"testimage":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1441974231531-c6227db76b6e"}},"slice_type":"first_slice","id":"_Default"}} />
+_Default.storyName = ''
