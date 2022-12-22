@@ -21,10 +21,10 @@ export const Salutation = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  color: var(--color-pure-white);
   font-size: 1.5rem;
+  color: var(--color-pure-white);
   filter: brightness(100%);
-
+  
   > h1 {
     width: 100%;
     text-align: center;
@@ -32,6 +32,12 @@ export const Salutation = styled.div`
     color: var(--color-primary);
     filter: drop-shadow(0px 10px 15px #000);
   } 
+
+  .Typewriter__wrapper {
+    font-size: 3rem;
+    font-weight: 600;
+    filter: drop-shadow(0px 10px 5px #000);
+  }
 
   > label {
     background-color: var(--color-pure-white);
