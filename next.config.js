@@ -17,6 +17,7 @@ const nextConfig = {
       "www.wanderon.in",
       "tenor.com",
       "media.tenor.com",
+      "itunes.apple.com",
     ],
   },
 };

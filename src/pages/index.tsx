@@ -11,6 +11,7 @@ import { TopBanner } from '../components/TopBanner';
 import CardSlider from '../components/Carousels/CardCarousel';
 
 import { data } from '../utils';
+import Footer from '../components/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Navbar />
-      
+
       <TopBanner />
       {/* <Container>
 
@@ -42,6 +43,7 @@ const Home: NextPage = () => {
         </Content>
       </Section>
 
+      <Footer />
     </>
   );
 };
