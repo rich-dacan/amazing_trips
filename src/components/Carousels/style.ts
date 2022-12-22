@@ -10,7 +10,7 @@ export const Container = styled.div`
     text-align: center;
     /* color: var(--color-pure-white); */
     font-size: var(--font-title-size);
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
   }
 
   .test {

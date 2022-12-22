@@ -7,9 +7,8 @@ import Image from 'next/image';
 export const TopBanner: React.FC = () => {
   return (
     <Container>
-      <h1> Welcome to Amazing trips </h1>
-
       <Salutation>
+        <h1> Welcome to Amazing trips </h1>
         <Typewriter
           options={{
             strings: [' Spreading Happiness!', ' Connecting People!'," Creating Memories!"," Creating Stories!"," Fulfilling Adventure!"],
@@ -29,18 +28,6 @@ export const TopBanner: React.FC = () => {
               .start();
           }}
         />
-
-        <Image 
-          src={"https://media.tenor.com/ogUOtLGPIYcAAAAC/viajando.gif"}
-          alt={"travel"}
-          height={250}
-          width={550}
-          priority
-          quality={100}
-        />
-      </Salutation>
-
-      <Content>
         <label htmlFor="test">
           <input 
             type="text" 
@@ -50,7 +37,28 @@ export const TopBanner: React.FC = () => {
             <BsSearch />
           </button>
         </label>
-      </Content>
+
+        {/* <Image 
+          src={"https://media.tenor.com/ogUOtLGPIYcAAAAC/viajando.gif"}
+          alt={"travel"}
+          height={250}
+          width={550}
+          priority
+          quality={100}
+        /> */}
+      </Salutation>
+
+      {/* <Content>
+        <label htmlFor="test">
+          <input 
+            type="text" 
+            placeholder="search your next trip"  
+          />
+          <button onClick={() => console.log('searching...')}>
+            <BsSearch />
+          </button>
+        </label>
+      </Content> */}
     </Container>
   );
 };
