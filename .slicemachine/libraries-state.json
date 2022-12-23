@@ -90,6 +90,86 @@
           "fileName": "index",
           "extension": "js"
         },
+        "screenshotPaths": {
+          "default": {
+            "path": "/media/rikhard/Novo volume/SPKJ/T.I/ProgStart/Next.JS/projects/amazing_trips/.slicemachine/assets/slices/FirstSlice/default/preview.png",
+            "width": 1280,
+            "height": 800
+          }
+        }
+      },
+      "titulo_principal": {
+        "library": "slices",
+        "id": "titulo_principal",
+        "name": "TituloPrincipal",
+        "description": "TituloPrincipal",
+        "model": {
+          "id": "titulo_principal",
+          "type": "SharedSlice",
+          "name": "TituloPrincipal",
+          "description": "TituloPrincipal",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TituloPrincipal",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Supper",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Cupidatat enim do tempor aliquip nostrud id amet. Officia nostrud anim commodo culpa nulla id tempor qui tempor cillum quis irure excepteur.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "titulo_principal"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
         "screenshotPaths": {}
       }
     }

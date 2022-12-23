@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 100vw !important;
-  padding: 0 120px;
+  /* padding: 0 120px; */
 
   &::-webkit-scrollbar {
     width: 0px;

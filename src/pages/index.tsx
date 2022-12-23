@@ -13,35 +13,37 @@ import CardSlider from '../components/Carousels/CardCarousel';
 import { data } from '../utils';
 import Footer from '../components/Footer';
 
+import { useFirstPrismicDocument } from '@prismicio/react';
+
 const inter = Inter({ subsets: ['latin'] })
 
 const Home: NextPage = () => {
+
+  const [document] = useFirstPrismicDocument()
+
+  console.log(document);
 
   return (
     <>
       <Navbar />
 
       <TopBanner />
-      {/* <Container>
 
-        <Section>
-          <Content>
-          </Content>
-        </Section>
+      <main>
+        <Container>
+          <Section>
+            <Content>
+              {data && <Carousel data={data} />}
+            </Content>
+          </Section>
 
-      </Container> */}
-
-      <Section>
-        <Content>
-          {data && <Carousel data={data} />}
-        </Content>
-      </Section>
-
-      <Section>
-        <Content>
-        {data && <CardSlider data={data} />}
-        </Content>
-      </Section>
+          <Section>
+            <Content>
+            {data && <CardSlider data={data} />}
+            </Content>
+          </Section>
+        </Container>
+      </main>
 
       <Footer />
     </>

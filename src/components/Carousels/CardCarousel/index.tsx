@@ -13,7 +13,7 @@ interface Props {
 
 const CardSlider: React.FC<Props> = (props) => {
 
-  const mobile = useWindowSize().width < 800;
+  const mobile = useWindowSize().width;
 
   if (props.data.length === 1) {
     return (
@@ -24,7 +24,7 @@ const CardSlider: React.FC<Props> = (props) => {
   const settings: SliderProps = {
     spaceBetween: 50,
     // slidesPerView: props.data.length < 3 ? props.data.length : 3,
-    slidesPerView: mobile ? 2 : 3,
+    slidesPerView: mobile < 800 ? 1 : mobile < 1000 ? 2 : 3,
     navigation: props.data.length > 2 && true,
     draggable: props.data.length > 2 && true,
     loop: true,

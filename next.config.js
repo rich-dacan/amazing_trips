@@ -18,6 +18,7 @@ const nextConfig = {
       "tenor.com",
       "media.tenor.com",
       "itunes.apple.com",
+      "imagens-voitto.s3.amazonaws.com",
     ],
   },
 };

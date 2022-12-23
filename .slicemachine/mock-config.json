@@ -1,6 +1,7 @@
 {
   "_cts": {
-    "home": {}
+    "home": {},
+    "repeattype": {}
   },
   "slices": {
     "FirstSlice": {
@@ -20,6 +21,24 @@
           },
           "testimage": {
             "content": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
+          }
+        }
+      }
+    },
+    "TituloPrincipal": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         }
       }
