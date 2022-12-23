@@ -258,6 +258,13 @@ export const FooterGridMobile = styled.div`
 
     border-bottom: 1px solid #313233;
 
+    img {
+      width: max-content;
+      height: max-content;
+      border-radius: 10px;
+      /* margin: 0 auto; */
+    }
+
     div {
       display: flex;
       justify-content: center;
@@ -270,6 +277,7 @@ export const FooterGridMobile = styled.div`
       font-size: 0.8rem;
       font-weight: bold;
       color: #bec6c6;
+
       &:hover {
         color: #6f7e86;
       }
@@ -281,6 +289,16 @@ export const FooterGridMobile = styled.div`
     justify-content: space-around;
     width: 100vw;
     padding-bottom: 70px;
+
+    > div {
+      p {
+        color: #fff;
+      }
+
+      a {
+        margin-top: 100px;
+      }
+    }
   }
 
   & > div {
@@ -306,6 +324,7 @@ export const DownloadOurAppMobile = styled.div`
   gap: 0px;
   margin-top: 25px !important;
   margin-bottom: 20px;
+
   p {
     font-family: 'Inter';
    font-style: normal;

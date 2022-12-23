@@ -7,7 +7,24 @@ type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
 /** Content for Home documents */
-type HomeDocumentData = Record<string, never>;
+interface HomeDocumentData {
+    /**
+     * Slice Zone field in *Home*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<HomeDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Home → Slice Zone*
+ *
+ */
+type HomeDocumentDataSlicesSlice = FirstSliceSlice;
 /**
  * Home document from Prismic
  *
@@ -18,7 +35,54 @@ type HomeDocumentData = Record<string, never>;
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
-export type AllDocumentTypes = HomeDocument;
+/** Content for RepeatType documents */
+interface RepeattypeDocumentData {
+    /**
+     * date field in *RepeatType*
+     *
+     * - **Field Type**: Date
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repeattype.date
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/date
+     *
+     */
+    date: prismicT.DateField;
+    /**
+     * datepicker field in *RepeatType*
+     *
+     * - **Field Type**: Timestamp
+     * - **Placeholder**: *None*
+     * - **API ID Path**: repeattype.datepicker
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/timestamp
+     *
+     */
+    datepicker: prismicT.TimestampField;
+    /**
+     * falsy field in *RepeatType*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: repeattype.falsy
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    falsy: prismicT.BooleanField;
+}
+/**
+ * RepeatType document from Prismic
+ *
+ * - **API ID**: `repeattype`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type RepeattypeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<RepeattypeDocumentData>, "repeattype", Lang>;
+export type AllDocumentTypes = HomeDocument | RepeattypeDocument;
 /**
  * Primary content in FirstSlice → Primary
  *
@@ -78,11 +142,60 @@ type FirstSliceSliceVariation = FirstSliceSliceDefault;
  *
  */
 export type FirstSliceSlice = prismicT.SharedSlice<"first_slice", FirstSliceSliceVariation>;
+/**
+ * Primary content in TituloPrincipal → Primary
+ *
+ */
+interface TituloPrincipalSliceDefaultPrimary {
+    /**
+     * Title field in *TituloPrincipal → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: titulo_principal.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *TituloPrincipal → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: titulo_principal.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Default variation for TituloPrincipal Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `TituloPrincipal`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TituloPrincipalSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TituloPrincipalSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *TituloPrincipal*
+ *
+ */
+type TituloPrincipalSliceVariation = TituloPrincipalSliceDefault;
+/**
+ * TituloPrincipal Shared Slice
+ *
+ * - **API ID**: `titulo_principal`
+ * - **Description**: `TituloPrincipal`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TituloPrincipalSlice = prismicT.SharedSlice<"titulo_principal", TituloPrincipalSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocument, AllDocumentTypes, FirstSliceSliceDefaultPrimary, FirstSliceSliceDefault, FirstSliceSliceVariation, FirstSliceSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, RepeattypeDocumentData, RepeattypeDocument, AllDocumentTypes, FirstSliceSliceDefaultPrimary, FirstSliceSliceDefault, FirstSliceSliceVariation, FirstSliceSlice, TituloPrincipalSliceDefaultPrimary, TituloPrincipalSliceDefault, TituloPrincipalSliceVariation, TituloPrincipalSlice };
     }
 }

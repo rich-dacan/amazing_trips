@@ -1,7 +1,7 @@
 {
   "id": "mock-doc-id",
   "url": null,
-  "type": "home",
+  "type": "repeattype",
   "href": null,
   "tags": [],
   "first_publication_date": "1970-01-01T00:00:01+0000",
@@ -11,6 +11,8 @@
   "lang": "en-us",
   "alternate_languages": [],
   "data": {
-    "slices": []
+    "date": "2020-11-18",
+    "datepicker": "2013-10-16T03:42:28+0000",
+    "falsy": true
   }
 }

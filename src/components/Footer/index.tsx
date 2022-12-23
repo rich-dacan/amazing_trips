@@ -286,7 +286,7 @@ const Footer: React.FC = () => {
               src="https://d1fdloi71mui9q.cloudfront.net/eB7iDcvMRUeJMWBRM3lz_DYS2JQak7WQ466r6"
               alt="Logo Amazing Trips"
               width={100}
-              height={42}
+              height={82}
               quality={100}
               priority
             />
@@ -359,14 +359,13 @@ const Footer: React.FC = () => {
           <div className="copyright__block">
             <div>
               <p>
-                <Link href="https://www.amazing-trips.com.br" legacyBehavior>
-                  <a>www.amazing-trips.com.br</a>
-                </Link>
-                <br />
                 © All rights reserved
                 <br />
-                Amazing Trips Tech 2020 - {new Date().getFullYear()}
+                Amazing Trips Tech 2020 - {new Date().getFullYear()} &reg;
               </p>
+              <Link href="https://www.amazing-trips.com.br" legacyBehavior>
+                www.amazing-trips.com
+              </Link>
             </div>
           </div> 
         </FooterGridMobile>

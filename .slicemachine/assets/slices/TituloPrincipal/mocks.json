@@ -1,0 +1,26 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Supper",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Cupidatat enim do tempor aliquip nostrud id amet. Officia nostrud anim commodo culpa nulla id tempor qui tempor cillum quis irure excepteur.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "titulo_principal"
+  }
+]

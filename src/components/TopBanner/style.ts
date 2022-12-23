@@ -37,6 +37,10 @@ export const Salutation = styled.div`
     font-size: 3rem;
     font-weight: 600;
     filter: drop-shadow(0px 10px 5px #000);
+
+    @media (max-width: 600px) {
+      font-size: 1.5rem;
+    }
   }
 
   > label {
